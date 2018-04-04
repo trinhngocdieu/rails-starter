@@ -15,4 +15,38 @@
  */
 
 // Custom bootstrap variables must be set or imported *before* bootstrap.
-@import 'bootstrap-custom';
+@import "bootstrap-custom";
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  max-width: 1000px;
+  margin: 0 auto;
+  background: linear-gradient(-90deg, #8dd7fc, #d6f1ff);
+
+  .header {
+    padding: 20px;
+    text-decoration-color: teal;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 28px;
+  }
+
+  .post-table {
+    background-color: #ffffff;
+    padding: 20px;
+
+    .table-header {
+      font-weight: bold;
+    }
+
+    .table-row {
+      padding: 5px;
+    }
+  }
+
+  .footer {
+    padding: 20px;
+    text-align: center;
+    color: #989da5;
+  }
+}

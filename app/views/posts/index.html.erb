@@ -1,21 +1,37 @@
-<h1>Posts</h1>
+
+<h1>Posts of <%= @user %></h1>
 
 <%= link_to 'New Post', new_post_path, class: 'btn btn-success btn-block' %>
 
 <br>
 
 <!-- POSTS -->
-<% @posts.each do |post| %>
-  <div class="card">
-    <div class="card-body">
-      <h5 class="card-title"><%= post.title %></h5>
-      <p class="card-text">
-        <%= post.content %>
-      </p>
-      <%= link_to 'Show', post, class: 'btn btn-primary' %>
-      <%= link_to 'Edit', edit_post_path(post), class: 'btn btn-secondary' %>
-      <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %>
+<div class="post-table">
+  <div class="row table-header">
+      <div class="col-sm-2">
+      Title
+      </div>
+      <div class="col-sm-6">
+      Content
+      </div>
+      <div class="col-sm-4">
+      </div>
     </div>
-  </div>
-<% end %>
+  <% @posts.each do |post| %>
+    <div class="row table-row">
+      <div class="col-sm-2">
+        <%= post.title %>
+      </div>
+      <div class="col-sm-6">
+        <%= post.content %>
+      </div>
+      <div class="col-sm-4">
+        <%= link_to 'Show', post, class: 'btn btn-primary' %>
+        <%= link_to 'Edit', edit_post_path(post), class: 'btn btn-secondary' %>
+        <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %>
+      </div>
+    </div>
+  <% end %>
+</div>
+
 <!-- POSTS -->

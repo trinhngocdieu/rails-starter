@@ -10,12 +10,25 @@
 
   <body>
     <div class="container">
-      <div class="alert alert-warning" role="alert" style="display: none;">
-        <%= notice %>
-      </div>
+      <div class="header">Post Management</div>
+      
+      <% if alert %>
+        <p class="alert alert-danger"><%= alert %></p>
+      <% end %>
+
+      <% unless flash[:notice].nil? %>
+        <div class="alert alert-success" role="alert">
+          <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+          <%= notice %> 
+        </div>
+      <% end %>
 
       <!-- Content here -->
       <%= yield %>
+
+      <div class="footer">
+        Copyright &copy; 2018 Hyakuren Vietnam
+      </div>
     </div>
   </body>
 </html>

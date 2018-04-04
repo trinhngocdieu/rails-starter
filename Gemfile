@@ -60,3 +60,13 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+# This adds some simple bindings to ruby to enable use of coffeelint
+gem 'coffeelint', '~> 1.16', '>= 1.16.1'
+
+# Autoprefixer is a tool to parse CSS and add vendor prefixes to CSS rules using values from the Can I Use database
+gem "autoprefixer-rails"
+
+# Authentication solution for Rails
+gem 'devise'
+

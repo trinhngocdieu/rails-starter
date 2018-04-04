@@ -1,0 +1,8 @@
+{
+    "editor.fontFamily": "Operator Mono",
+    "editor.fontSize": 16,
+    "editor.fontWeight": "300",
+    "editor.tabSize": 2,
+    "terminal.integrated.fontSize": 14,
+    "files.autoSave": "onFocusChange"
+}
